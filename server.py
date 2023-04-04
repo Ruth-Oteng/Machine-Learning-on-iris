@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import *
 import numpy as np
 import pandas as pd
 
@@ -8,7 +8,7 @@ app=Flask(__name__)
 @app.route('/') 
 def home(): 
    
- return str('Hello')
+ return render_template('index.html')
 
 #app.route('/r')
 #def index():
