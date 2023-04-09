@@ -8,7 +8,7 @@ app=Flask(__name__)
 @app.route('/') 
 def home(): 
    
- return render_template('newindex.html')
+ return render_template('results.html')
 
 @app.route('/p', methods=["POST"]) 
 def mainpage(): 
@@ -26,9 +26,9 @@ def mainpage():
   var=model.predict([[selfstudy,tut]])
   result=var[0]*100
   if result >50:
-    return render_template('newindex.html', data= str(round(result)) + "% implies a high chance of passing" )
+    return render_template('results.html', data= str(round(result)) + "% implies a high chance of passing" )
   else:
-    return render_template('newindex.html', data= str(round(result)) + "% implies you might fail" )
+    return render_template('results.html', data= str(round(result)) + "% implies you might fail" )
   
   
 @app.route('/iris') 
