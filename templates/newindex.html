@@ -4,6 +4,40 @@
   {% endblock %}
 
 {% block content %}
+<h2><center>A</center></h2>
+  <form action="/p" method="post">
+    <div class="form-group">
+      <label >Hours of self study:</label>
+      <select class="form-control"  name="selfstudy">
+        {% for i in range(2,16) %}
+        <option>{{i}}</option>
+        {% endfor %}
+      </select>
+      <br>
+      <label >Hours of spent on tutorials:</label>
+      <select class="form-control"  name="tut">
+        {% for i in range(20,46) %}
+        <option>{{i}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    
+    <div> 
+      <br><br>
+        <label >The result is :</label>
+          <input type="text" class="form-control" value="{{data}}">     
+    </div>
+    <div>
+       <tr>
+          <td colspan="2" align ="center">
+          <input type="submit" value="Predict result">
+          <input type="reset" value="clear">
+          </td>
+        </tr>
+    </div>
+  </form>
+
+
 
 
 
