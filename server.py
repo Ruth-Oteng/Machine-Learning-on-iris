@@ -29,6 +29,34 @@ def mainpage():
     return render_template('newindex.html', data= str(round(result)) + "% implies a high chance of passing" )
   else:
     return render_template('newindex.html', data= str(round(result)) + "% implies you might fail" )
+  
+  
+@app.route('/iris') 
+def irispage(): 
+  return render_template('iris.html')   
+
+@app.route('/irisp', methods=["POST"]) 
+def irispredict(): 
+  sw=eval(request.form.get("sw"))
+  sh=eval(request.form.get("sh"))
+  pw=eval(request.form.get("pw"))
+  ph=eval(request.form.get("ph"))
+  
+  url='https://raw.githubusercontent.com/sarwansingh/Python/master/ClassExamples/data/iris.csv'
+  namelist=['SepalLength', 'SepalWidth', 'PetalLenght', 'PetalWidth', 'Species']
+  irisf=pd.read_csv(url, header=None, names=namelist)
+  irisdf=irisf.values
+  X=irisdf[:,:4]
+  Y= irisdf[:,4]
+  
+  from sklearn.linear_model import LogisticRegression
+  model1=LogisticRegression()
+  model1.fit(X,Y)
+  var=model1.predict([[sw,sh,pw,ph]])
+                     
+                      
+  return render_template('iris.html', data= str(var[0])) 
+
 
 @app.route('/ml') 
 def run():
