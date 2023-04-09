@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>
-  {% block title %}
-  
-  {% endblock %}
-</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<style>
+  <title>
+    {% block title %}
+    
+    {% endblock %}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
-    } 
-    .bg-2 { 
-    background-color: #474e5d;
+    }
+    
+    footer {
+      background-color: grey;
+      padding: 25px;
+    }
+  .bg-2 { 
+    background-color: grey;
     color: #ffffff;
     padding-top: 70px;
     padding-bottom: 70px;
   }
-  .bg-3 { 
-    background-color: #ffffff;
-    color: #555555;
+  .image{
+    position: relative;
   }
-
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-</style>
+  .bg-image {
+  background-image: url('https://cdn.glitch.global/f8a202e5-e5c3-4680-b985-b947d449e1fe/AI%20image.jpeg?v=1681026709068');
+  background-size: cover;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  background-attachment: fixed; 
+  width: 100%;
+  height: 500px;
+  color: white;
+}
+.black-button {
+    background-color: black;
+    color: white;
+  }
+  
+  </style>
 </head>
 <body>
-  
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -43,47 +57,68 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" href="#"><img src="https://cdn.glitch.global/f8a202e5-e5c3-4680-b985-b947d449e1fe/logo2.png?v=1680631819992"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
+        <li class="active"><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Gallery</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects
+            <ul class="dropdown-menu">
+              <li><a href="#">Result Prediction</a></li>
+              <li><a href="#">Iris Flower Prediction</a></li>
+            </ul>
+          </a>
+        </li>
         <li><a href="#">Contact</a></li>
       </ul>
-        <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
 </nav>
-  
-  <div class="container-fluid bg-2 text-center">
-  <h3>About Projects</h3>
-  <p>There are two Machine learning Projects hosted on this page. </p>
-  <p>one of the one project is based on classification whereas the other project is based on Regression. </p>
-  <a href="#" class="btn btn-info" role="button">Link Button</a>
+
+<div class= "container">
+  <div class="row">
+    <div class=" col-md-12 jumbotron bg-image">
+
+    <h1></h1>
+    <p></p>
+  </div>
+</div>
 </div>
 
-<!--<div class="container-fluid bg-3 text-center">    
-  <h3>About Projects</h3><br>
+<div class="container-fluid">
+  <h1><center>About</center></h1>
   <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" alt="Image" width="350" height="300">
+    <div class="col-sm-3 col-md-6">
+      <img src="https://cdn.glitch.global/f8a202e5-e5c3-4680-b985-b947d449e1fe/Ai%20about%20image.jpeg?v=1681028481644" class="img-circle" alt="image" width="350" height="350" >
     </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds2.jpg" alt="Image" width="350" height="300">
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds3.jpg" alt="Image" width="350" height="300">
+    <div class="col-sm-9 col-md-6">
+      <p>Machine Learning (ML) has 
+        emerged as a discipline that enables computers to assist humans in making sense of large and complex data sets.</p>
+      <p> </p>
+      <p>With the drop in the cost of high-throughput technologies, large amounts of omics data are being generated and made accessible to researchers. Analyzing these complex high-volume data is not trivial,
+         and the use of classical statistics can not explore their full potential.</p>
+      <p> </p>
+      <p>Machine Learning can thus be very useful 
+        in mining large omics datasets to uncover new insights that can consequently lead to the advancement of Life Sciences.</p>
+      <p> </p>
+      <p><b>This are two projects on this page, click on any of the buttons below to access any of the projects</b></p>
+        <h2>Result Prediction</h2>
+        <a href="#" class="btn btn-info black-button" role="button">Link Button</a>
+        <br><br>
+        <h2>Iris Flower Prediction</h2>
+            <a href="#" class="btn btn-info black-button" role="button">Link Button</a>
+       
     </div>
   </div>
-</div>-->
-  
+</div>
+
+
+
 <footer class="container-fluid text-center">
   <p>@ruthoteng</p>
 </footer>
